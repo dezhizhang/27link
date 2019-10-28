@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget{
         ),
         body: HomeContent(),
       ),
+      theme: ThemeData(
+        primaryColor: Colors.pink
+      ),
     );
   }
   
