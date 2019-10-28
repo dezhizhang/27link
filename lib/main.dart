@@ -13,33 +13,28 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('flutter demo'),
+          title: Text('你好flutter'),
         ),
         body: HomeContent(),
-      ),
-      theme: ThemeData(
-        primaryColor: Colors.pink
+
       ),
     );
   }
   
 }
-
 
 class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Center(
-      child: Text(
-        '哈哈哈你好呀',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(
-          
-          color: Colors.red
-        ),
-      ),
+    return Container(
+      child: Text('flutter'),
     );
   }
   
 }
+
+
+
+
+
