@@ -27,8 +27,19 @@ class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      child: Text('flutter'),
+    return Center(
+      child: Container(
+        child: Text('哈哈我是flutter容器'),
+        width: 300,
+        height: 300,
+        decoration: BoxDecoration(
+          color: Colors.yellow,
+          border: Border.all(
+            color: Colors.red,
+            width: 2
+          )
+        ),
+      ),
     );
   }
   
