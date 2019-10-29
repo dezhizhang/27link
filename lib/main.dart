@@ -25,20 +25,36 @@ class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Center(
+    return Container(
+      // width: 180,
+      height: 180,
       child: ListView(
-        padding: EdgeInsets.all(10),
+        scrollDirection: Axis.horizontal,
         children: <Widget>[
-          ListTile(
-            title: Text('俣哈'),
-            subtitle: Text('哈哈哈俣只哈俣俣合哈哈哈'),
+          Container(
+            width: 180,
+            height: 180,
+            color: Colors.red,
+          ),
+          Container(
+            width: 180,
+            height: 180,
+            color:Colors.yellow
+          ),
+          Container(
+            width: 180,
+            height: 180,
+            color: Colors.pink,
           )
+
         ],
       ),
     );
   }
   
 }
+
+
 
 
 
