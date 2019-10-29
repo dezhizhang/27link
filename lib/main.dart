@@ -6,40 +6,6 @@ void main() {
   runApp(MyApp());
 }
 
-
-// class MyApp extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('你好flutter'),
-//         ),
-//         body: HomeContent(),
-
-//       ),
-//     );
-//   }
-// }
-
-// class HomeContent extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     return Center(
-//       child: Container(
-//         width: 300,
-//         height: 300,
-//          child: Image.network(
-//            'https://www.eureka.net.cn/public/admin/upload/2019-10-27/1572176387116.jpg',
-//            fit: BoxFit.cover,
-//            ),
-//       ),
-//     );
-//   }
-// }
-
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -47,7 +13,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('张德志你好'),
+          title: Text('哈哈你好'),
         ),
         body: HomeContent(),
       ),
@@ -60,17 +26,21 @@ class HomeContent extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Center(
-      child: Container(
-        width: 300,
-        height: 300,
-        child: Image.network('https://www.eureka.net.cn/public/admin/upload/2019-10-27/1572176387116.jpg',
-          fit: BoxFit.cover,
-        ),  
+      child: ListView(
+        padding: EdgeInsets.all(10),
+        children: <Widget>[
+          ListTile(
+            title: Text('俣哈'),
+            subtitle: Text('哈哈哈俣只哈俣俣合哈哈哈'),
+          )
+        ],
       ),
     );
   }
   
 }
+
+
 
 
 
