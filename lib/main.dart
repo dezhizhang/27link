@@ -24,9 +24,14 @@ class MyApp extends StatelessWidget{
 }
 
 class HomeContent extends StatelessWidget{
-  List list = ['123','456','4567','789'];
+  List list = ['123','345','789','123'];
   List<Widget> _getData() {
-    return list.map(item => )
+    return list.map((value){
+      return ListTile(
+        title: Text(value),
+      );
+    }).toList();
+
   }
   @override
   Widget build(BuildContext context) {
