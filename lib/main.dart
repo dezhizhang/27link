@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:qiai/container.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,55 +11,31 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('哈哈你好'),
+          title: Text('你好'),
         ),
         body: HomeContent(),
       ),
-    );
-  }
-}
-
-class HomeContent extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Container(
-      // width: 180,
-      height: 180,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[
-          Container(
-            width: 180,
-            height: 180,
-            color: Colors.red,
-          ),
-          Container(
-            width: 180,
-            height: 180,
-            color:Colors.yellow
-          ),
-          Container(
-            width: 180,
-            height: 180,
-            color: Colors.pink,
-          )
-
-        ],
+      theme: ThemeData(
+        primaryColor: Colors.pink
       ),
     );
   }
   
 }
 
-
-
-
-
-
-
-
-
-
-
-
+class HomeContent extends StatelessWidget{
+  List list = ['123','456','4567','789'];
+  List<Widget> _getData() {
+    return list.map(item => )
+  }
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      child: ListView(
+        children: this._getData(),
+      ),
+    );
+  }
+  
+}
