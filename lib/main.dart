@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'listData.dart';
-
 
 void main() {
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget{
   @override
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('你好'),
+          title: Text('我是app'),
         ),
         body: HomeContent(),
       ),
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget{
       ),
     );
   }
-  
 }
 
 
@@ -30,53 +28,37 @@ class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Padding(
-      padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-      child: GridView.count(
-        crossAxisCount: 2,
-        childAspectRatio: 0.6,
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
-          ),
-           Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
-          ),
-           Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
-          ),
-           Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
-          ),
-           Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
-          ),
-           Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
-          ),
-           Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
-          ),
-           Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
-          )
-        
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        IconContent(Icons.home,color: Colors.red),
+        IconContent(Icons.search,color: Colors.yellow),
+        IconContent(Icons.dehaze,color: Colors.green)
+
+      ],
     );
   }
-   
+ 
+  
 }
 
+class IconContent extends StatelessWidget{
+  double size = 32;
+  Color color = Colors.red;
+  IconData icon;
+  IconContent(this.icon,{this.color,this.size});
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      width: 100,
+      height: 100,
+      color: this.color,
+      child: Center(
+        child: Icon(this.icon,size: this.size,color: Colors.white),
+      ),
 
-
-
-
+    );
+  }
+  
+}
