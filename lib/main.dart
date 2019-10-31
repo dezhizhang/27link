@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'listData.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -23,16 +25,58 @@ class MyApp extends StatelessWidget{
   
 }
 
+
 class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      child: Text('哈哈'),
+    return Padding(
+      padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+      child: GridView.count(
+        crossAxisCount: 2,
+        childAspectRatio: 0.6,
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
+          ),
+           Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
+          ),
+           Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
+          ),
+           Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
+          ),
+           Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
+          ),
+           Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
+          ),
+           Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
+          ),
+           Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: Image.network('https://www.itying.com/images/flutter/1.png',fit: BoxFit.cover),
+          )
+        
+        ],
+      ),
     );
   }
-  
+   
 }
+
+
 
 
 
