@@ -23,52 +23,16 @@ class MyApp extends StatelessWidget{
   
 }
 
-//  class HomeContent extends StatelessWidget{
-//   List list = [];
-//   HomeContent() {
-//     for(var i=0;i<20;i++) {
-//       list.add('我是第$i条数据');
-//     }
-//   }
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     return Container(
-//       child: ListView.builder(
-//         itemCount: this.list.length,
-//         itemBuilder: (context,index) {
-//           return ListTile(
-//             title: Text(this.list[index]),
-//           );
-//         },
-//       ),
-//     );
-//   }
-   
-//  }
-
 class HomeContent extends StatelessWidget{
-  List list = [];
-  HomeContent() {
-    for(var i=0;i<30;i++) {
-      list.add('我是第$i条数据');
-    }
-    
-  }
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      child: ListView.builder(
-        itemCount: this.list.length,
-        itemBuilder: (context,index) {
-          return ListTile(
-            title: Text(this.list[index]),
-          );
-        },
-      ),
+      child: Text('哈哈'),
     );
   }
-
+  
 }
+
+
+
