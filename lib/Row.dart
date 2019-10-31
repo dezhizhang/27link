@@ -43,9 +43,9 @@ class HomeContent extends StatelessWidget{
 }
 
 class IconContent extends StatelessWidget{
+  IconData icon;
   double size = 32;
   Color color = Colors.red;
-  IconData icon;
   IconContent(this.icon,{this.color,this.size});
   @override
   Widget build(BuildContext context) {
@@ -55,9 +55,8 @@ class IconContent extends StatelessWidget{
       height: 100,
       color: this.color,
       child: Center(
-        child: Icon(this.icon,size: this.size,color: Colors.white),
+        child: Icon(this.icon,size:this.size,color: Colors.white),
       ),
-
     );
   }
   
