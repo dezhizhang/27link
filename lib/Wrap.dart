@@ -26,16 +26,29 @@ class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      child: RaisedButton(
-        child: Text('按钮'),
-        textColor: Colors.white,
-        color: Colors.yellow,
-        onPressed: () {
-          
-        },
-      ),
+    return Wrap(
+      runSpacing: 10,
+      spacing: 10,
+      children: <Widget>[
+        RaisedButton(
+          child: Text('哈哈'),
+          color: Colors.pink,
+          textColor: Colors.white,
+          onPressed: () {
+
+          },
+        ),
+        RaisedButton(
+          child: Text('呢呢'),
+          color: Colors.pink,
+          textColor: Colors.white,
+          onPressed: () {
+
+          },
+        )
+      ],
     );
   }
   
 }
+
