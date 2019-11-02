@@ -31,13 +31,18 @@ class Tabs extends StatefulWidget {
 
 class _TabsState extends State<Tabs> {
   int currentIndex = 0;
+  List list = [
+    Home(),
+    CateGory(),
+    Search(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('首页'),
       ),
-      body: HomeContent(),
+      body: this.list[this.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this.currentIndex,
         onTap: (int index) {
@@ -82,3 +87,30 @@ class _HomeContentState extends State<HomeContent> {
   }
 }
 
+
+class Home extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Text('home');
+  }
+  
+}
+
+
+class CateGory extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Text('category');
+  }
+}
+
+class Search extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Text('search');
+  }
+  
+}
