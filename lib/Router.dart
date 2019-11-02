@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import './Detail.dart';
 import './Search.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget{
   }
 }
 
+
 class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -32,25 +34,13 @@ class HomeContent extends StatelessWidget{
       child: Column(
         children: <Widget>[
           RaisedButton(
-            child: Text('跳到搜索'),
+            child: Text('跳到搜索页'),
             color: Colors.pink,
             textColor: Colors.white,
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => Search()
-                )
-              );
-            },
-          ),
-          RaisedButton(
-            child: Text('跳到详情'),
-            color: Colors.green,
-            textColor: Colors.white,
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder:(context) => Detail()
+                  builder:(context) => Search()
                 )
               );
             },
