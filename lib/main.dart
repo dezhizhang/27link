@@ -45,6 +45,8 @@ class MyApp extends StatelessWidget{
   
 // }
 
+
+
 class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -60,8 +62,8 @@ class HomeContent extends StatelessWidget{
               ),
               ListTile(
                 leading: Icon(Icons.home),
-                title: Text('标题'),
-                subtitle: Text('副标题'),
+                title: Text('我是标题'),
+                subtitle: Text('我是副标题'),
               )
             ],
           ),
@@ -69,4 +71,5 @@ class HomeContent extends StatelessWidget{
       ],
     );
   }
+  
 }
