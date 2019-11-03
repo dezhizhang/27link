@@ -6,25 +6,43 @@ void main() {
   runApp(MyApp());
 }
 
+
+
 class MyApp extends StatelessWidget{
+  final routes = {
+    '/search':(context) => Search(),
+    '/detail':(context,{arguments}) => Detail(arguments: arguments)
+  };
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('hello'),
+          title: Text('首页'),
         ),
         body: HomeContent(),
       ),
-      routes: {
-        '/search':(context) => Search(),
-        '/detail':(context) => Detail()
+      onGenerateRoute: (RouteSettings settings) {
+        final String name = settings.name;
+        final Function pageContentBuilder = this.routes[name];
+        if(pageContentBuilder != null) {
+          if(settings.arguments !=null) {
+            final Route route = MaterialPageRoute(
+              builder: (context) => pageContentBuilder(context,arguments:settings.arguments)
+            );
+            return route;
+          } else {
+            final Route route = MaterialPageRoute(
+              builder: (context) => pageContentBuilder(context)
+            );
+            return route;
+          }
+        }
       },
-      
     );
   }
-  
 }
 
 class HomeContent extends StatelessWidget{
@@ -35,17 +53,13 @@ class HomeContent extends StatelessWidget{
       child: Column(
         children: <Widget>[
           RaisedButton(
-            child: Text('搜索'),
-            color: Colors.pink,
-            onPressed: () {
-              Navigator.pushNamed(context, '/search');
-            },
-          ),
-          RaisedButton(
             child: Text('详情'),
-            color: Colors.green,
+            color: Colors.pink,
+            textColor: Colors.white,
             onPressed: () {
-              Navigator.pushNamed(context, '/detail');
+              Navigator.pushNamed(context, '/detail',arguments: {
+                'id':123
+              });
             },
           )
         ],
@@ -54,4 +68,3 @@ class HomeContent extends StatelessWidget{
   }
   
 }
-
