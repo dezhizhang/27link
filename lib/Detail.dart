@@ -11,6 +11,7 @@ class Detail extends StatelessWidget{
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
+          backgroundColor: Colors.green,
           appBar: AppBar(
             centerTitle: true,
             title: Text('详情页'),

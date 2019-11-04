@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './Search.dart';
 import './Detail.dart';
+import './TabBars.dart';
+import './TextFiled.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +11,9 @@ void main() {
 class MyApp extends StatelessWidget{
   final routes = {
     '/search':(context) => Search(),
-    '/detail':(context,{arguments}) => Detail(arguments: arguments)
+    '/detail':(context,{arguments}) => Detail(arguments: arguments),
+    '/tabbar':(context) => TabBars(),
+    '/form':(context) => TextField()
   };
 
   @override
@@ -59,6 +63,22 @@ class HomeContent extends StatelessWidget{
               Navigator.pushNamed(context, '/detail',arguments: {
                 'id':123
               });
+            },
+          ),
+          RaisedButton(
+            child: Text('顶部导航'),
+            color: Colors.green,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/tabbar');
+            },
+          ),
+          RaisedButton(
+            child: Text('表单'),
+            color: Colors.pink,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/form');
             },
           )
         ],
