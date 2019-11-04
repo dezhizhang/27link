@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './Search.dart';
 import './Detail.dart';
 import './TabBars.dart';
-import './TextFiled.dart';
+import './FormInfo.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget{
     '/search':(context) => Search(),
     '/detail':(context,{arguments}) => Detail(arguments: arguments),
     '/tabbar':(context) => TabBars(),
-    '/form':(context) => TextField()
+    '/form':(context) => FormInfo()
   };
 
   @override
@@ -81,6 +81,7 @@ class HomeContent extends StatelessWidget{
               Navigator.pushNamed(context, '/form');
             },
           )
+          
         ],
       ),
     );

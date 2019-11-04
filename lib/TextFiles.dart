@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class TextFild extends StatefulWidget {
-  TextFild({Key key}) : super(key: key);
+
+class TextFiles extends StatefulWidget {
+  TextFiles({Key key}) : super(key: key);
 
   @override
-  _TextFildState createState() => _TextFildState();
+  _TextFilesState createState() => _TextFilesState();
 }
 
-class _TextFildState extends State<TextFild> {
+class _TextFilesState extends State<TextFiles> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +17,7 @@ class _TextFildState extends State<TextFild> {
           title: Text('hello'),
         ),
         body: Text('hello'),
-      )
+      ),
     );
   }
 }
