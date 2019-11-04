@@ -3,6 +3,7 @@ import './Search.dart';
 import './Detail.dart';
 import './TabBars.dart';
 import './FormInfo.dart';
+import './Checked.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget{
     '/search':(context) => Search(),
     '/detail':(context,{arguments}) => Detail(arguments: arguments),
     '/tabbar':(context) => TabBars(),
-    '/form':(context) => FormInfo()
+    '/form':(context) => FormInfo(),
+    '/checked':(context) => Checked()
   };
 
   @override
@@ -79,6 +81,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/form');
+            },
+          ),
+          RaisedButton(
+            child: Text('单选框'),
+            color: Colors.green,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/checked');
             },
           )
           
