@@ -29,7 +29,7 @@ class HomeContent extends StatefulWidget {
 }
 
 class _HomeContentState extends State<HomeContent> {
-  String username;
+  String userName;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,30 +38,25 @@ class _HomeContentState extends State<HomeContent> {
             TextField(
               decoration: InputDecoration(
                 hintText: '请输入内容',
-                border:  OutlineInputBorder()
+                border: OutlineInputBorder()
               ),
-              onChanged: (value){
+              onChanged: (value) {
                 setState(() {
-                 this.username = value; 
+                  this.userName = value; 
                 });
               },
             ),
-            SizedBox(height: 20),
-            Container(
-              width: double.infinity,
-              child: RaisedButton(
-                child: Text('登录'),
-                color: Colors.pink,
-                textColor: Colors.white,
-                onPressed: () {
-                  print(this.username);
-
-                },
-              ),
+            RaisedButton(
+              child: Text('登录'),
+              color: Colors.pink,
+              textColor: Colors.white,
+              onPressed: () {
+                print(this.userName);
+              },
             )
          ],
-       )
-
+       ),
     );
   }
 }
+
