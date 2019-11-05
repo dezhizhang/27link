@@ -7,6 +7,7 @@ import './Checked.dart';
 import './RadioForm.dart';
 import './FormDemo.dart';
 import './DatePick.dart';
+import './ThreeData.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget{
     '/checked':(context) => Checked(),
     '/radio':(context) => RadioForm(),
     '/info':(context) => FormDemo(),
-    '/time':(context) => DatePick()
+    '/time':(context) => DatePick(),
+    '/three':(context) => ThreeData(),
   };
 
   @override
@@ -119,6 +121,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/time');
+            },
+          ),
+          RaisedButton(
+            child: Text('第三方时间'),
+            color: Colors.green,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/three');
             },
           )
           

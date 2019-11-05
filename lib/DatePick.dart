@@ -43,10 +43,11 @@ class _HomeContentState extends State<HomeContent> {
     var result = await showDatePicker(
       context: context,
       initialDate: time,
-      firstDate: DateTime(1970),
-      lastDate: DateTime(2020)
+      firstDate: DateTime(2019),
+      lastDate: DateTime(2024)
     );
     print(result);
+
   }
   @override
   Widget build(BuildContext context) {
@@ -61,7 +62,7 @@ class _HomeContentState extends State<HomeContent> {
               Icon(Icons.arrow_drop_down),
             ],
           ),
-          onTap: this._showDatePicker()
+          onTap: _showDatePicker
         )
       ],
     );
