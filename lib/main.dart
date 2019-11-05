@@ -5,6 +5,7 @@ import './TabBars.dart';
 import './FormInfo.dart';
 import './Checked.dart';
 import './RadioForm.dart';
+import './FormDemo.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget{
     '/form':(context) => FormInfo(),
     '/checked':(context) => Checked(),
     '/radio':(context) => RadioForm(),
+    '/info':(context) => FormDemo(),
   };
 
   @override
@@ -99,6 +101,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/radio');
+            },
+          ),
+          RaisedButton(
+            child: Text('信息登记'),
+            color: Colors.blue,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/info');
             },
           )
           

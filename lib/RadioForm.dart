@@ -31,6 +31,7 @@ class HomeContent extends StatefulWidget {
 
 class _HomeContentState extends State<HomeContent> {
   int sex = 1;
+  bool flag = true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,13 +42,11 @@ class _HomeContentState extends State<HomeContent> {
              value: 1,
              onChanged: (value) {
                setState(() {
-                this.sex = value; 
+                 this.sex = value;
                });
              },
              groupValue: this.sex,
            ),
-           SizedBox(width: 20),
-           Text('女'),
            Radio(
              value: 2,
              onChanged: (value) {
@@ -56,9 +55,18 @@ class _HomeContentState extends State<HomeContent> {
                });
              },
              groupValue: this.sex,
+           ),
+           Switch(
+             value: this.flag,
+             onChanged: (value) {
+               setState(() {
+                this.flag = value; 
+               });
+             },
            )
          ],
-       )
+       ),
     );
   }
 }
+
