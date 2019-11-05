@@ -4,6 +4,7 @@ import './Detail.dart';
 import './TabBars.dart';
 import './FormInfo.dart';
 import './Checked.dart';
+import './RadioForm.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget{
     '/detail':(context,{arguments}) => Detail(arguments: arguments),
     '/tabbar':(context) => TabBars(),
     '/form':(context) => FormInfo(),
-    '/checked':(context) => Checked()
+    '/checked':(context) => Checked(),
+    '/radio':(context) => RadioForm(),
   };
 
   @override
@@ -89,6 +91,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/checked');
+            },
+          ),
+          RaisedButton(
+            child: Text('radio'),
+            color: Colors.pink,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/radio');
             },
           )
           
