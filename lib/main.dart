@@ -8,6 +8,7 @@ import './RadioForm.dart';
 import './FormDemo.dart';
 import './DatePick.dart';
 import './ThreeData.dart';
+import './Swiper.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget{
     '/info':(context) => FormDemo(),
     '/time':(context) => DatePick(),
     '/three':(context) => ThreeData(),
+    '/swiper':(context) => SwiperDemo()
   };
 
   @override
@@ -129,6 +131,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/three');
+            },
+          ),
+          RaisedButton(
+            child: Text('swiper'),
+            color: Colors.pink,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/swiper');
             },
           )
           
