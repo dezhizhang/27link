@@ -9,6 +9,7 @@ import './FormDemo.dart';
 import './DatePick.dart';
 import './ThreeData.dart';
 import './Swiper.dart';
+import './Dilog.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget{
     '/info':(context) => FormDemo(),
     '/time':(context) => DatePick(),
     '/three':(context) => ThreeData(),
-    '/swiper':(context) => SwiperDemo()
+    '/swiper':(context) => SwiperDemo(),
+    '/dilog':(context) => DilogDemo(),
   };
 
   @override
@@ -140,8 +142,15 @@ class HomeContent extends StatelessWidget{
             onPressed: () {
               Navigator.pushNamed(context, '/swiper');
             },
+          ),
+          RaisedButton(
+            child: Text('弹框'),
+            color: Colors.green,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/dilog');
+            },
           )
-          
         ],
       ),
     );
