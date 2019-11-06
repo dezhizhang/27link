@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
 import 'dart:convert';
 
 class GetDemo extends StatefulWidget {
@@ -33,13 +34,11 @@ class HomeContent extends StatefulWidget {
 class _HomeContentState extends State<HomeContent> {
 
   _getData() async{
-    var url = 'http://a.itying.com/api/productlist';
-    var res = await http.get(url);
-    if(res.statusCode == 200) {
-      var data = json.decode(res.body);
-      print(data);
+    var dio = new Dio();
+    var url = 'https://www.eureka.net.cn/api/product/list';
+    var response = await dio.get(url);
+    print(response);
 
-    }
   }
 
   @override
