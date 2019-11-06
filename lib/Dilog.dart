@@ -39,19 +39,69 @@ class _HomeContentState extends State<HomeContent> {
           actions: <Widget>[
             FlatButton(
               child: Text('确定'),
-              onPressed: (){
-                //  print('确定');
+              onPressed: () {
                 Navigator.pop(context);
               },
             ),
-          
             FlatButton(
               child: Text('取消'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.pop(context);
               },
             )
           ],
+        );
+      }
+    );
+  }
+  _simpleDialog() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return SimpleDialog(
+          title: Text('请选择'),
+          children: <Widget>[
+            SimpleDialogOption(
+              child: Text('option A'),
+              onPressed: () {
+                print('option A');
+                Navigator.pop(context);
+              },
+            ),
+            SimpleDialogOption(
+              child: Text('Option B'),
+              onPressed: () {
+                print('option B');
+                Navigator.pop(context);
+              },
+            )
+          ],
+        );
+      }
+    );
+  }
+
+  _modelBottomSheet() {
+    showModalBottomSheet(
+      context:context,
+      builder: (context) {
+        return Container(
+          child: Column(
+            children: <Widget>[
+              ListTile(
+                title: Text('分享A'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text('分享B'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              )
+            ],
+          ),
         );
       }
     );
@@ -66,6 +116,15 @@ class _HomeContentState extends State<HomeContent> {
           color: Colors.pink,
           textColor: Colors.white,
           onPressed: _alertDialog
+        ),
+        RaisedButton(
+          child: Text('simpleDialog'),
+          color: Colors.green,
+          onPressed: _simpleDialog,
+        ),
+        RaisedButton(
+          child: Text('modelBottomSheet'),
+          onPressed: _modelBottomSheet,
         )
       ],
     );
