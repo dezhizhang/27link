@@ -11,6 +11,7 @@ import './ThreeData.dart';
 import './Swiper.dart';
 import './Dilog.dart';
 import './CustomDialog.dart';
+import './GetDeom.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget{
     '/three':(context) => ThreeData(),
     '/swiper':(context) => SwiperDemo(),
     '/dilog':(context) => DilogDemo(),
-    '/custrom':(context) => CustomDialog()
+    '/custrom':(context) => CustomDialog(),
+    '/get':(context) => GetDemo(),
   };
 
   @override
@@ -159,6 +161,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/custrom');
+            },
+          ),
+          RaisedButton(
+            child: Text('GET'),
+            color: Colors.green,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/get');
             },
           )
         ],
