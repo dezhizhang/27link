@@ -12,6 +12,7 @@ import './Swiper.dart';
 import './Dilog.dart';
 import './CustomDialog.dart';
 import './GetDeom.dart';
+import './Equipment.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget{
     '/dilog':(context) => DilogDemo(),
     '/custrom':(context) => CustomDialog(),
     '/get':(context) => GetDemo(),
+    '/equement':(context) => Equipment()
   };
 
   @override
@@ -169,6 +171,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/get');
+            },
+          ),
+          RaisedButton(
+            child: Text('获取设备信息'),
+            color: Colors.pink,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/equement');
             },
           )
         ],

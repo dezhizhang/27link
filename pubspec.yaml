@@ -28,6 +28,8 @@ dependencies:
   flutter_swiper: ^1.1.6
   http: ^0.12.0+2
   dio: ^2.0.2
+  device_info: ^0.4.0+2
+  
 
 dev_dependencies:
   flutter_test:
