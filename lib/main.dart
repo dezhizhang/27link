@@ -13,6 +13,7 @@ import './Dilog.dart';
 import './CustomDialog.dart';
 import './GetDeom.dart';
 import './Equipment.dart';
+import './ImagePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget{
     '/dilog':(context) => DilogDemo(),
     '/custrom':(context) => CustomDialog(),
     '/get':(context) => GetDemo(),
-    '/equement':(context) => Equipment()
+    '/equement':(context) => Equipment(),
+    '/image':(context) => ImagePage()
   };
 
   @override
@@ -179,6 +181,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/equement');
+            },
+          ),
+          RaisedButton(
+            child: Text('image'),
+            color: Colors.yellow,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/image');
             },
           )
         ],
