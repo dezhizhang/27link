@@ -14,6 +14,7 @@ import './CustomDialog.dart';
 import './GetDeom.dart';
 import './Equipment.dart';
 import './ImagePage.dart';
+import './NetWork.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget{
     '/custrom':(context) => CustomDialog(),
     '/get':(context) => GetDemo(),
     '/equement':(context) => Equipment(),
-    '/image':(context) => ImagePage()
+    '/image':(context) => ImagePage(),
+    '/network':(context) => NetWork()
   };
 
   @override
@@ -189,6 +191,14 @@ class HomeContent extends StatelessWidget{
             textColor: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/image');
+            },
+          ),
+          RaisedButton(
+            child: Text('网络'),
+            color: Colors.pink,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/network');
             },
           )
         ],

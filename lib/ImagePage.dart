@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:chewie/chewie.dart'
 
 class ImagePage extends StatefulWidget {
   ImagePage({Key key}) : super(key: key);
