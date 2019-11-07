@@ -15,6 +15,8 @@ import './GetDeom.dart';
 import './Equipment.dart';
 import './ImagePage.dart';
 import './NetWork.dart';
+import './Storage.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -37,7 +39,8 @@ class MyApp extends StatelessWidget{
     '/get':(context) => GetDemo(),
     '/equement':(context) => Equipment(),
     '/image':(context) => ImagePage(),
-    '/network':(context) => NetWork()
+    '/network':(context) => NetWork(),
+    '/storage':(context) => Storage(),
   };
 
   @override
@@ -200,7 +203,16 @@ class HomeContent extends StatelessWidget{
             onPressed: () {
               Navigator.pushNamed(context, '/network');
             },
-          )
+          ),
+          RaisedButton(
+            child: Text('本地存储'),
+            color: Colors.green,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/storage');
+            },
+          ),
+          
         ],
       ),
     );
