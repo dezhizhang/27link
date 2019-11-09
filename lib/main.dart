@@ -212,6 +212,14 @@ class HomeContent extends StatelessWidget{
               Navigator.pushNamed(context, '/storage');
             },
           ),
+          RaisedButton(
+            child: Text('外部浏览'),
+            color: Colors.pink,
+            textColor: Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/link')
+            },
+          )
           
         ],
       ),
